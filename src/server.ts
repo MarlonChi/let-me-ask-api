@@ -7,6 +7,9 @@ import {
 import { fastifyCors } from "@fastify/cors";
 import { env } from "./env.ts";
 import { getRoomsRoute } from "./http/routes/get-rooms.ts";
+import { createRoomsRoute } from "./http/routes/create-room.ts";
+import { getRoomsQuestionsRoute } from "./http/routes/get-room-questions.ts";
+import { createQuestionRoute } from "./http/routes/create-question.ts";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -22,6 +25,9 @@ app.get("/health", () => {
 });
 
 app.register(getRoomsRoute);
+app.register(createRoomsRoute);
+app.register(getRoomsQuestionsRoute);
+app.register(createQuestionRoute);
 
 app.listen({ port: env.PORT }).then(() => {
   console.log("🚀 Http Server running on port 3333");
