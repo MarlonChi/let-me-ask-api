@@ -22,6 +22,13 @@
       "when": 1752014008851,
       "tag": "0002_clear_norman_osborn",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1752107285718,
+      "tag": "0003_spicy_wildside",
+      "breakpoints": true
     }
   ]
 }
